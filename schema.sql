@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS posts;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    title TEXT NOT NULL,
+    details TEXT,
+    name TEXT NOT NULL,
+    mail TEXT NOT NULL,
+    response TEXT,
+    responseWriter TEXT
+);
+
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    psw TEXT NOT NULL
+)

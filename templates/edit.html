@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br><br>
+
+<form method="post" class="form">
+    <h1 class="redTitle">Modifier le post</h1>
+    <br><br>
+    <div class="form-group">
+        <h2><label for="title">Titre</label></h2>
+        <input type="text" name="title" placeholder="Post title"
+               class="form-control-title"
+               value="{{ request.form['title'] or post['title'] }}">
+        </input>
+    </div>
+    <br>
+    <br>
+
+    <div class="form-group">
+        <h2><label for="details">Details</label></h2>
+        <textarea name="details" placeholder="Détails du post"
+                  class="form-control-details">{{ request.form['content'] or post['details'] }}</textarea>
+    </div>
+
+    <div class="form-group">
+        <h2><label for="name">Nom: </label></h2>
+        <br />
+        <input
+          type="text"
+          name="name"
+          placeholder="Veuillez entrer votre nom"
+          class="form-control-name"
+          value="{{ request.form['name'] or post['name'] }}"
+        />
+      </div>
+<br>
+      <div class="form-group">
+        <h2><label for="mail">Email : </label></h2>
+        <br />
+        <input
+          type="text"
+          name="mail"
+          placeholder="Mail de l'auteur du post"
+          class="form-control-mail"
+          value="{{ request.form['mail'] or post['mail'] }}"
+        />
+      </div>
+
+    <br>
+    <div class="form-group">
+        <h2><label for="response">Reponse</label></h2>
+        <br>
+        <textarea name="response" placeholder="Reponse"
+                  class="form-control-details">{{ request.form['response'] or post['response'] }}</textarea>
+    </div>
+    <br>
+
+    <div class="form-group">
+        <h2><label for="responseWriter">Nom de l'admin : </label></h2>
+        <br />
+        <input
+          type="text"
+          name="responseWriter"
+          placeholder="Nom de l'admin qui répond"
+          class="form-control-mail"
+          value="{{ request.form['responseWriter'] or post['responseWriter'] }}"
+        />
+      </div>
+
+      <br>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" id="submitBtn2">Envoyer</button>
+    </div>
+</form>
+<hr>
+{% endblock %}

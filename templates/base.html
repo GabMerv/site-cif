@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename= 'css/style.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    <title>C.I.F.</title>
+  </head>
+  <body>
+    <div class="navbar-div">
+      <ul class="navbar-ul">
+        <li class="navbar-container">
+          <div class="whiteBox">
+            <img
+              src="{{ url_for('static', filename= 'images/CIF.png') }}"
+              height="54px"
+            />
+          </div>
+        </li>
+
+        <li class="navbar-container">
+          <nav class="navbar navbar-expand-custom navbar-mainbg">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <div class="hori-selector">
+                  <div class="left"></div>
+                  <div class="right"></div>
+                </div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#informations">Informations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#history"> Histoire</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#concours">Concours</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#exit">Sorties</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#projets">Projets</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </li>
+      </ul>
+    </div>
+
+    <div>{% block content %} {% endblock %}</div>
+  </body>
+</html>
