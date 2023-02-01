@@ -1,4 +1,4 @@
-# site-cif
+# Site du C.I.F.
 Site officiel du Club Informatique de Franklin
 
 Le site vise à informer des différentes activités du Club Informatique de Franklin pour attirer toujours plus de personnes.
